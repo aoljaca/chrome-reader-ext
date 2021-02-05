@@ -3,7 +3,7 @@ $(document).ready(function() {
     function singleWords() {
         p_tags = document.querySelectorAll('p')
         $(p_tags).lettering('words');
-        $("span, ul, li").hover(function(){
+        $("span, ul, li, ol").hover(function(){
         $(this).css("background-color", "yellow");
         }, function(){
             $(this).css("background-color", "white");
@@ -12,7 +12,7 @@ $(document).ready(function() {
     }
     async function paragraphs() {
         $("p").hover(function(){
-            $("p, h1, h3, h2, ul, li").css("background-color", "white");
+            $("p, h1, h3, h2, ul, li, ol").css("background-color", "white");
             $(this).css("background-color", "pink");
             
         }
@@ -22,14 +22,15 @@ $(document).ready(function() {
         // }
         );
         $("li").hover(function(){
-            $("p, h1, h3, h2, ul, li").css("background-color", "white");
+            $("p, h1, h3, h2, ul, li, ol").css("background-color", "white");
             $(this).css("background-color", "pink");
             
         })
         p_tags = document.querySelectorAll('p')
         await setTimeout(() => {
             p_tags = document.querySelectorAll('p')
-            console.log(p_tags);
+            body = document.querySelector('body')
+            console.log(body);
             $(p_tags).lettering('words');
             $("p").on("click", function() {
                 $("p").css("background-color", "white");
@@ -96,7 +97,7 @@ $(document).ready(function() {
             }
             `;
             document.head.appendChild(style);
-        }, 5000)
+        }, 2000)
         
         // $(p_tags).lettering('words');
         // $("p").on("click", function() {
