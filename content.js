@@ -30,7 +30,7 @@ $(document).ready(function() {
         await setTimeout(() => {
             p_tags = document.querySelectorAll('p')
             body = document.querySelector('body')
-            console.log(body);
+            // console.log(p_tags);
             $(p_tags).lettering('words');
             $("p").on("click", function() {
                 $("p").css("background-color", "white");
@@ -92,12 +92,12 @@ $(document).ready(function() {
             style.innerHTML = `
             
             
-            span:hover {
+            span:hover, li:hover {
                 background-color: yellow;
             }
             `;
             document.head.appendChild(style);
-        }, 2000)
+        }, 5000)
         
         // $(p_tags).lettering('words');
         // $("p").on("click", function() {
