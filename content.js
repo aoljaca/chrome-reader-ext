@@ -2,6 +2,7 @@
 $(document).ready(function() {
     function singleWords() {
         p_tags = document.querySelectorAll('p')
+        li_tags = document.querySelectorAll('li') // use this for list items
         $(p_tags).lettering('words');
         $("span, ul, li, ol").hover(function(){
         $(this).css("background-color", "yellow");
@@ -10,6 +11,7 @@ $(document).ready(function() {
         }
         )
     }
+    alert("Made By Andrej")
     async function paragraphs() {
         $("p").hover(function(){
             $("p, h1, h3, h2, ul, li, ol").css("background-color", "white");
