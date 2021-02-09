@@ -11,7 +11,6 @@ $(document).ready(function() {
         }
         )
     }
-    alert("Made By Andrej")
     async function paragraphs() {
         $("p").hover(function(){
             $("p, h1, h3, h2, ul, li, ol").css("background-color", "white");
